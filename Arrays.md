@@ -56,7 +56,7 @@ Optimal approach:
                 left++;
             } else {
                 temp.add(arr[right]);
-                //HERE WE ADD OUT CODE TO INCREMENT THE COUNTER
+                //HERE WE ADD OUR CODE TO INCREMENT THE COUNTER
                 cnt = cnt + (mid - left + 1);
                 right++;
             }
@@ -73,5 +73,7 @@ Optimal approach:
         for (int i = low; i <= high; i++) {
             arr[i] = temp.get(i - low);
         }
+
+     return cnt;
     }
 ```
