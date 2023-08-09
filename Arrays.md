@@ -21,4 +21,9 @@ What is an inversion of an array? Definition: for all i & j < size of array, if 
 
 **Solution**:
 
+Brute force approach:
+- Compare every element with all the subsequent elements and keep increasing the count if found such a pair (a[i] > a[j] for i < j).
+- Time complexity: O(n^2)
 
+Optimal approach:
+- 
