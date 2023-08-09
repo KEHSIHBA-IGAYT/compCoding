@@ -1,7 +1,7 @@
 # 1.  Count inversions in an array
-**Problem Statement:** Given an array of N integers, count the inversion of the array (using [merge-sort](https://takeuforward.org/data-structure/merge-sort-algorithm/)).
+**Problem Statement:** Given an array of N integers, count the inversion of the array.
 
-What is an inversion of an array? Definition: for all i & j < size of array, if i < j then you have to find pair (A[i],A[j]) such that A[j] < A[i].
+Inversions in an array: You have to find pairs (A[i],A[j])  where  i < j and A[j] < A[i].
 
 **Example 1:**
 **Input Format**: N = 5, array[] = {1,2,3,4,5}
@@ -41,3 +41,46 @@ Optimal approach:
        i                    j
   arr1[i] > arr2[j] ====> cnt = cnt + 1; i++;
   ```
+  - This looks like something which can easily be achieved by breaking the arrays into subarrays and sort them (Ummmm, sounds similar to "Merge Sort").
+  - In the "Merge" function of merge sort, where we compare the elements from 2 subarrays using left & right pointers, we can simply increment our "count" variable by (mid - left + 1).
+```
+    int cnt = 0;
+    private static int merge(int[] arr, int low, int mid, int high) {
+
+        ArrayList<Integer> temp = new ArrayList<>(); // temporary array
+
+        int left = low;      // starting index of left half of arr
+        int right = mid + 1;   // starting index of right half of arr
+
+        //storing elements in the temporary array in a sorted manner//
+        while (left <= mid && right <= high) {
+
+            if (arr[left] <= arr[right]) {
+                temp.add(arr[left]);
+                left++;
+            } else {
+                temp.add(arr[right]);
+                //HERE WE ADD OUT CODE TO INCREMENT THE COUNTER
+                cnt = cnt + (mid - left + 1);
+                right++;
+            }
+        }
+
+        // if elements on the left half are still left //
+        while (left <= mid) {
+            temp.add(arr[left]);
+            left++;
+        }
+
+        //  if elements on the right half are still left //
+        while (right <= high) {
+            temp.add(arr[right]);
+            right++;
+        }
+        
+        // transfering all elements from temporary to arr //
+        for (int i = low; i <= high; i++) {
+            arr[i] = temp.get(i - low);
+        }
+    }
+```
