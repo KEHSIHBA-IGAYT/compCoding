@@ -22,4 +22,21 @@ Brute force approach:
 
 Optimal approach:
 - Intuition to remember: If there are 2 sorted subarrays {2,3,5} & {1,4} (example 2), we can take 2 pointers i & j, "i" pointing to 1st element of arr1 and "j" pointing to 1st element of arr2.
-- Since both arrays are sorted, we can infer that if arr1[i] > arr2[j] then all elements subsequent to arr1[i] will be bigger than arr2[j] and hence we do not need to compare those elements individually with arr2[j]. (We can increase the count by n1-i here & then move j)
+- Since both arrays are sorted, we can infer that if arr1[i] > arr2[j] then all elements subsequent to arr1[i] will be bigger than arr2[j] and hence we do not need to compare those elements individually with arr2[j]. (We can increase the count by **n1-i** here & then move j by 1)
+  {2,3,5}                {1,4}
+   i                          j
+   arr1[i] > arr2[j] ====> cnt = cnt + 3; j++;
+   
+   {2,3,5}                {1,4}
+      i                           j
+    arr1[i] < arr2[j] ====>  i++;
+    
+     {2,3,5}                {1,4}
+          i                         j
+    arr1[i] < arr2[j] ====>  i++;
+    
+      {2,3,5}       {1,4}
+               i           j
+     arr1[i] > arr2[j] ====> cnt = cnt + 1; i++;
+        
+- If arr1[i] <= arr2[j], then we move "i" by 1 without incrementing the count.
