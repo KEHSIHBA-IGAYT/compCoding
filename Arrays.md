@@ -78,3 +78,16 @@ Abhishek
      return cnt;
     }
 ```
+# 2.  Implement Pow(x,n)
+**Problem Statement:** Given a double x and integer n, calculate x raised to power n. Basically Implement pow(x, n).
+**Example 1:**
+
+**Input:** x = 2.00000, n = 10
+
+**Output:** 1024.00000
+
+**Explanation:** You need to calculate 2.00000 raised to 10 which gives ans 1024.00000
+
+Solution:
+
+[[Drawing 2023-08-11 01.57.51.excalidraw]]
