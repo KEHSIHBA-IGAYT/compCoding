@@ -1,3 +1,7 @@
+# Table of Contents
+[1. Count inversions in an array](https://github.com/KEHSIHBA-IGAYT/compCoding/edit/main/Arrays/Arrays.md#1--count-inversions-in-an-array)<br>
+[2.Implement Pow(x,n)](https://github.com/KEHSIHBA-IGAYT/compCoding/blob/main/Arrays/Arrays.md#2--implement-powxn) 
+
 # 1.  Count inversions in an array
 **Problem Statement:** Given an array of N integers, count the inversion of the array.
 
