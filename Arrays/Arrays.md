@@ -89,4 +89,4 @@ Abhishek
 
 Solution:
 
-![[Attachments/Drawing 2023-08-11 01.57.51.excalidraw.jpg]]
+![[Attachments/Drawing_2a.jpg]]
