@@ -90,3 +90,24 @@ Abhishek
 Solution:
 
 ![2a](Attachments/Drawing_2a.jpg)
+
+```
+public static double pow(x, n) {
+// n can be negative so store n and take out mod
+int nn = n;
+if(nn < 0) nn = -1 * nn;
+double ans = 1;
+while(nn > 0) {
+	if(nn%2 == 0) {
+		x = x*x;
+		n = n/2;
+	}
+	else {
+		ans = ans * x;
+		n = n - 1;
+	}
+}
+if(n < 0) ans = (double) (1.0) / (double) (ans);
+return ans;
+}
+```
