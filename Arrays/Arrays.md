@@ -1,6 +1,6 @@
 # Table of Contents
 [1. Count inversions in an array](https://github.com/KEHSIHBA-IGAYT/compCoding/edit/main/Arrays/Arrays.md#1--count-inversions-in-an-array)<br>
-[2.Implement Pow(x,n)](https://github.com/KEHSIHBA-IGAYT/compCoding/blob/main/Arrays/Arrays.md#2--implement-powxn) 
+[2. Implement Pow(x,n)](https://github.com/KEHSIHBA-IGAYT/compCoding/blob/main/Arrays/Arrays.md#2--implement-powxn) 
 
 # 1.  Count inversions in an array
 **Problem Statement:** Given an array of N integers, count the inversion of the array.
@@ -49,10 +49,9 @@ Optimal approach:
   - This looks like something which can easily be achieved by breaking the arrays into subarrays and sort them (Ummmm, sounds similar to "Merge Sort").
   - In the "Merge" function of merge sort, where we compare the elements from 2 subarrays using left & right pointers, we can simply increment our "count" variable by (mid - left + 1).
 ```
-    int cnt = 0;
-    private static int merge(int[] arr, int low, int mid, int high) {
-
+private static int merge(int[] arr, int low, int mid, int high) {
         ArrayList<Integer> temp = new ArrayList<>();
+        int cnt = 0;
         int left = low;
         int right = mid + 1; 
         while (left <= mid && right <= high) {
