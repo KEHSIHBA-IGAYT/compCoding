@@ -41,10 +41,7 @@ Optimal approach:
        i                    j
   arr1[i] > arr2[j] ====> cnt = cnt + 1; i++;
   ```
-
-
-
-  
+Abhishek
   - This looks like something which can easily be achieved by breaking the arrays into subarrays and sort them (Ummmm, sounds similar to "Merge Sort").
   - In the "Merge" function of merge sort, where we compare the elements from 2 subarrays using left & right pointers, we can simply increment our "count" variable by (mid - left + 1).
 ```
