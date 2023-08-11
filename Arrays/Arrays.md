@@ -89,4 +89,4 @@ Abhishek
 
 Solution:
 
-![[Attachments/Drawing_2a.jpg]]
+![2a](Attachments/Drawing_2a.jpg)
