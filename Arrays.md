@@ -90,4 +90,4 @@ Abhishek
 
 Solution:
 
-![alt text] (../Excalidraw/Drawing 2023-08-11 01.57.51.excalidraw.png)
+[[Excalidraw/Drawing 2023-08-11 01.57.51.excalidraw.png]]
