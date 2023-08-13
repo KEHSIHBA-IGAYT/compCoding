@@ -90,7 +90,7 @@ private static int merge(int[] arr, int low, int mid, int high) {
 
 **Explanation:** You need to calculate 2.00000 raised to 10 which gives ans 1024.00000
 
-Solution:
+**Solution:**
 
 ![2a](Attachments/Drawing_2a.jpg)
 
@@ -113,4 +113,42 @@ while(nn > 0) {
 if(n < 0) ans = (double) (1.0) / (double) (ans);
 return ans;
 }
+```
+
+# 3. Find the Majority Element that occurs more than N/2 times
+**Problem Statement:** Given an array of **N integers**, write a program to return an element that occurs more than **N/2** times in the given array. You may consider that such an element always exists in the array.
+
+**Example 1:**
+**Input Format:**  N = 7, nums[] = {2,2,1,1,1,2,2}
+**Result**: 2
+**Explanation**: After counting the number of times each element appears and comparing it with half of array size, we get 2 as result.
+
+**Solution:**
+
+One solution is to use a hashmap where element of the arrays would be the key of the hashmap and it's frequency/occurrence would be the value against that key. Since accessing and writing to a hashmap is of order O(1), the total time complexity would be O(n).
+But we are consuming extra O(n) space for hashmap.
+
+A better approach is to use Moore's Voting Algorithm.
+![3a](Attachments/Moore_Voting.png)
+**Code:**
+```
+var majorityElement = function(nums) {
+    //Moore's Voting Algorithm
+    let cnt = 0;
+    let result;
+
+    for(let ele of nums) {
+        if(cnt === 0 ) {
+            result = ele;
+            cnt++;
+        }
+        else if(ele === result) {
+            cnt ++;
+        }
+        else {
+            cnt--;
+        }
+    }
+    return result;
+};
 ```
